@@ -1,6 +1,3 @@
-puts "The students of Villains Academy"
-puts "-------------"
-
 students = [
   "Dr. Hannibal Lecter",
   "Darth Vader",
@@ -15,6 +12,21 @@ students = [
   "Norman Bates"
 ]
 
-puts students
-puts "Altogether, we have #{students.size} students!"
-# students.each{|student| puts student}
+def header
+  puts "The students of Villains Academy"
+  puts "-------------"
+end
+
+
+def show(names)
+  # puts names
+  names.each{ |name| puts name }
+end
+
+def footer(names)
+  puts "Altogether, we have #{names.count} students!"
+end
+
+header
+show(students)
+footer(students)
